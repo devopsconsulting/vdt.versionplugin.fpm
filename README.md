@@ -1,11 +1,9 @@
 vdt.versionplugin.fpm
 =====================
 
-Plugin for https://github.dtc.avira.com/VDT/vdt.version
+Plugin for https://github.com/devopsconsulting/vdt.version
 
 This plugin uses FPM. See also http://gofedora.wordpress.com/2012/04/19/easy-package-management-with-fpm/
-
-You can test this plugin easily by using vdt.buildout : https://github.dtc.avira.com/VDT/vdt.buildout
 
 FPM should be install as a gem using rubygems : 
 
