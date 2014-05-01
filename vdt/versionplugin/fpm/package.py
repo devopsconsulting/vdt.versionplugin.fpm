@@ -13,13 +13,9 @@ def build_package(version):
     with version.checkout_tag:
         cmd = ['fpm', '-s', 'dir', '--version=%s' % version] + version.extra_args
         log.debug("Running command %s" % " ".join(cmd))
-        try:
-            log.debug(subprocess.check_output(cmd))
-        except subprocess.CalledProcessError as e:
-            log.error(e.output)
-            return e.returncode
-        else:
-            return 0
+        log.debug(subprocess.check_output(cmd))
+
+    return 0
 
 
 def set_package_version(version):
