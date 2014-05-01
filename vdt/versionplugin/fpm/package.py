@@ -12,7 +12,7 @@ def build_package(version):
     log.debug("Building version {0} with fpm.".format(version))
     with version.checkout_tag:
         cmd = ['fpm', '-s', 'dir', '--version=%s' % version] + version.extra_args
-        log.debug("Running command %s" % " ".join(cmd))
+        log.debug("Running command {0}".format(" ".join(cmd)))
         log.debug(subprocess.check_output(cmd))
 
     return 0
